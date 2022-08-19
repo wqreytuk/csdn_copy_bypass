@@ -21,11 +21,17 @@ changeColor.addEventListener("click", async () => {
     chrome.storage.sync.get("color", ({ color }) => {
         console.log("fuck you");
         var element_arr = document.getElementsByClassName("has-numbering");
-        arr_length = element_arr.length;
+        var arr_length = element_arr.length;
         for(var i =0; i<arr_length; i++) {
             element_arr[i].setAttribute('onclick','mdcp.copyCode(event)');
         }
 
+
+         element_arr = document.getElementsByClassName("signin");
+        arr_length = element_arr.length;
+        for(var i =0; i<arr_length; i++) {
+            element_arr[i].setAttribute('onclick','hljs.copyCode(event)');
+        }
     
 setInterval(function () {
     var element = document.getElementsByClassName("passport-login-container")[0];
